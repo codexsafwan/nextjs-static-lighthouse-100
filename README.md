@@ -1,0 +1,1 @@
+# nextjs-static-lighthouse-100
