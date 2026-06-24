@@ -1,0 +1,136 @@
+/* ==============================
+   3-Column Grid Layout
+   ============================== */
+
+.layout {
+  display: grid;
+  grid-template-columns: 240px 1fr 60px;
+  min-height: 100vh;
+}
+
+/* ==============================
+   Left Sidebar
+   ============================== */
+
+.leftSidebar {
+  background-color: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+}
+
+.profileHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.profileImageWrapper {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.125rem;
+}
+
+.jobTitle {
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+/* ==============================
+   Progress Bars (Sidebar Bottom)
+   ============================== */
+
+.progressSection {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.progressItem {
+  margin-bottom: 1rem;
+}
+
+.progressItem:last-child {
+  margin-bottom: 0;
+}
+
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-main);
+}
+
+.progressTrack {
+  height: 3px;
+  background-color: var(--color-border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+}
+
+/* ==============================
+   Main Content Area
+   ============================== */
+
+.mainContent {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ==============================
+   Responsive — Tablet & Mobile
+   ============================== */
+
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+    padding-bottom: 60px;
+  }
+
+  .leftSidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    width: 280px;
+    transform: translateX(-100%);
+    transition: transform var(--transition-medium);
+    box-shadow: none;
+  }
+
+  :global([data-menu="open"]) .leftSidebar {
+    transform: translateX(0);
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.12);
+  }
+}

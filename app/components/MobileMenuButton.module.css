@@ -1,0 +1,65 @@
+/* ==============================
+   Mobile Menu Button
+   ============================== */
+
+.button {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 200;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  padding: 0;
+}
+
+.line {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: var(--color-text-main);
+  border-radius: 1px;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+/* Hamburger → X animation */
+.lineOpen:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.lineOpen:nth-child(2) {
+  opacity: 0;
+}
+
+.lineOpen:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ==============================
+   Overlay Backdrop
+   ============================== */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 90;
+}
+
+/* ==============================
+   Responsive — Show on mobile
+   ============================== */
+
+@media (max-width: 1024px) {
+  .button {
+    display: flex;
+  }
+}

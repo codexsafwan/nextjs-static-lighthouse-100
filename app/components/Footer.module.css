@@ -1,0 +1,207 @@
+.footer {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    display: block;
+    width: 100%;
+    background-color: var(--color-bg);
+    border-top: 1px solid var(--color-border);
+    padding: 4rem 1.5rem 6rem 1.5rem; /* bottom padding accommodates the bottom nav bar */
+  }
+
+  .container {
+    max-width: 480px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  /* Cards Base */
+  .card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+  }
+
+  .cardHeaderRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    color: var(--color-text-muted);
+  }
+
+  .cardTitle {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* Skill Bars */
+  .skillsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .skillItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+
+  .skillHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+  }
+
+  .skillPercent {
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  .skillTrack {
+    height: 4px;
+    background-color: var(--color-border);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+  }
+
+  .skillFill {
+    height: 100%;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-full);
+  }
+
+  /* Stats Grid */
+  .statsRow {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .statCard {
+    flex: 1;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+
+  .statNumber {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    line-height: 1;
+  }
+
+  .statLabel {
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+  }
+
+  /* Current Focus Card */
+  .focusCard {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .focusCardHeader {
+    margin-bottom: 0.75rem;
+    color: var(--color-text-muted);
+  }
+
+  .focusText {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    line-height: 1.5;
+    max-width: 80%;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cloudIconWrapper {
+    position: absolute;
+    right: 1rem;
+    bottom: 0.75rem;
+    color: var(--color-border);
+    opacity: 0.4;
+    z-index: 1;
+  }
+
+  .cloudIcon {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* Synergy AI Card */
+  .projectCard {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projectImageWrapper {
+    width: 100%;
+    aspect-ratio: 1.85 / 1;
+    position: relative;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .projectContent {
+    padding: 1.5rem;
+  }
+
+  .projectTitleRow {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .projectDot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+  }
+
+  .projectTitle {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-main);
+  }
+
+  .projectDescription {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+  }
+}

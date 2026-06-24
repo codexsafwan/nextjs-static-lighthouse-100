@@ -1,0 +1,122 @@
+.header {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    display: block;
+    width: 100%;
+    background-color: var(--color-bg);
+    padding: 3rem 1.5rem 1.5rem 1.5rem;
+  }
+
+  .container {
+    max-width: 480px;
+    margin-inline: auto;
+  }
+
+  /* Profile Section */
+  .profileSection {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .profileImageContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .profileImageOuter {
+    padding: 6px;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--radius-lg);
+    background-color: var(--color-surface);
+    display: inline-flex;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .profileImageInner {
+    width: 80px;
+    height: 80px;
+    border-radius: calc(var(--radius-lg) - 4px);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .profileLabel {
+    display: block;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+  }
+
+  .profileTitle {
+    font-size: clamp(2rem, 6vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--color-text-main);
+    margin-bottom: 1rem;
+    max-width: 400px;
+    margin-inline: auto;
+  }
+
+  .highlight {
+    color: var(--color-primary);
+  }
+
+  .profileSubtitle {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    max-width: 360px;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+  }
+
+  .ctaRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .btnPrimary {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    height: 44px;
+    transition: background-color var(--transition-fast);
+  }
+
+  .btnPrimary:hover {
+    background-color: var(--color-primary-hover);
+  }
+
+  .btnMail {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-main);
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--transition-fast), border-color var(--transition-fast);
+  }
+
+  .btnMail:hover {
+    background-color: var(--color-surface-hover);
+    border-color: var(--color-text-muted);
+  }
+}

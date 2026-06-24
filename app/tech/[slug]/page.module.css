@@ -1,0 +1,122 @@
+/* ==============================
+   Article Detail Page
+   ============================== */
+
+.page {
+  padding: 2.5rem 3rem;
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+/* ==============================
+   Breadcrumb Navigation
+   ============================== */
+
+.breadcrumb {
+  margin-bottom: 2rem;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: gap var(--transition-fast);
+}
+
+.backLink:hover {
+  gap: 0.625rem;
+}
+
+/* ==============================
+   Article Content
+   ============================== */
+
+.article {
+  display: flex;
+  flex-direction: column;
+}
+
+.articleHeader {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Category Badge */
+.badge {
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid;
+}
+
+.badgeGreen {
+  color: var(--color-category-green);
+  border-color: var(--color-category-green);
+  background-color: var(--color-category-green-bg);
+}
+
+.badgeBlue {
+  color: var(--color-category-blue);
+  border-color: var(--color-category-blue);
+  background-color: var(--color-category-blue-bg);
+}
+
+.date {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.articleTitle {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.articleLead {
+  font-size: 1.0625rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* Article Body */
+.articleBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-text-main);
+}
+
+/* ==============================
+   Responsive
+   ============================== */
+
+@media (max-width: 768px) {
+  .page {
+    padding: 2rem 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 1.5rem 1rem;
+  }
+}

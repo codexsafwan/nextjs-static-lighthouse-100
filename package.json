@@ -1,0 +1,25 @@
+{
+  "name": "nextjs-static-lighthouse-100",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/codexsafwan/nextjs-static-lighthouse-100.git",
+  "author": "codexsafwan <codexsafwan@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "postbuild": "node scripts/optimize-html.js",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^16.2.9",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "@types/react": "^19.2.17",
+    "typescript": "^6.0.3"
+  }
+}
