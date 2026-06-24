@@ -1,11 +1,20 @@
 const fs = require('fs');
 const path = require('path');
 
-const OUT_DIR = path.join(__dirname, '..', 'out');
+let OUT_DIR = path.join(__dirname, '..', 'out');
+
+// Check if Vercel build output directory exists and use it
+const vercelOutDir = path.join(__dirname, '..', '.vercel', 'output', 'static');
+if (!fs.existsSync(OUT_DIR) && fs.existsSync(vercelOutDir)) {
+  OUT_DIR = vercelOutDir;
+}
 
 // Recursively find all HTML files
 function getHtmlFiles(dir) {
   let results = [];
+  if (!fs.existsSync(dir)) {
+    return results;
+  }
   const list = fs.readdirSync(dir);
   list.forEach((file) => {
     const filePath = path.join(dir, file);
@@ -30,6 +39,10 @@ function getBase64Image(srcPath) {
 }
 
 function run() {
+  if (!fs.existsSync(OUT_DIR)) {
+    console.warn(`Warning: Target directory ${OUT_DIR} does not exist. Skipping HTML optimization.`);
+    return;
+  }
   console.log('Optimizing HTML files (CSS + profile.webp inlining + script lazy-load) in', OUT_DIR);
 
   const htmlFiles = getHtmlFiles(OUT_DIR);
